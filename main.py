@@ -1,6 +1,7 @@
 import streamlit as st
 from langchain import PromptTemplate
 from langchain.llms import OpenAI
+
 import os
 
 openai_api_key = os.getenv('OPENAI_API_KEY')
@@ -35,7 +36,7 @@ st.markdown("Is your name Ginger? Do you find it difficult filtering your vulgar
             In a corporate environment you can't, or at least shouldn't, reply to emails telling people that they are \
             fucking idiots. \
             Simply vent your verbal diarrhea into the prompts below and through the miracle of science, your vulgar \
-            slander will be reformatted for professional use.. ")
+            slander will be reformatted for professional use. ")
 
 st.markdown("## Email Being Replied To:")
 
