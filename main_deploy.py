@@ -111,5 +111,3 @@ else:
 
 st.write(formatted_email)
 st.button("Regenerate email?")
-clipboard.copy(formatted_email)
-st.markdown("Email copied to clipboard!")
