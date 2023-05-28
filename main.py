@@ -27,7 +27,7 @@ prompt = PromptTemplate(
 def load_LLM(openai_api_key):
     """Logic for loading the chain you want to use should go here."""
     # Make sure your openai_api_key is set as an environment variable
-    llm = OpenAI(temperature=.7, openai_api_key="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")
+    llm = OpenAI(temperature=.7, openai_api_key="")
     return llm
 
 st.set_page_config(page_title="Ginger's Email Filter", page_icon=":robot:")
@@ -58,7 +58,7 @@ st.markdown("### Your Converted Email:")
 
 if reply_email_input:
     
-    llm = load_LLM(openai_api_key="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")
+    llm = load_LLM(openai_api_key="")
 
     prompt_with_email = prompt.format(original_email=original_email_input, reply_email=reply_email_input)
 
