@@ -35,7 +35,7 @@ def load_LLM(openai_api_key):
 
 st.set_page_config(page_title="Ginger's Email Filter", page_icon=":robot:")
 st.header("Ginger's Email Filter")
-st.write(openai_api_key)
+
 st.markdown("Is your name Ginger? Do you find it difficult filtering your vulgar thoughts into a professional email response? \
             In a corporate environment you can't, or at least shouldn't, reply to emails telling people that they are \
             fucking idiots. \
