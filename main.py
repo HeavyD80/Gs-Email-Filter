@@ -6,19 +6,15 @@ import os
 openai_api_key = os.getenv('OPENAI_API_KEY')
 
 template = """
-    I am going to supply you with two paragraphs. The first paragraph will begin with "ORIGINAL EMAIL:". The second paragraph will begin with "REPLY EMAIL:".
-    
-    I want you to rewrite the second paragraph labeled "REPLY EMAIL" while considering the contecxt of the "ORIGINAL EMAIL" paragraph. 
-    
-    Please ensure that the second paragraph is rewritten in a proffessional format and compassionate tone. Please start the rewritten second paragraph 
-    with a warm introduction. Add the introduction if you need to.
-    
-    If the first paragraph labeled "REPLY EMAIL" is missing, assume that the rewritten second paragraph is a new email being written.
+    I received an email as follows: {original_email} 
+    END EMAIL
 
-    ORIGINAL EMAIL: {original_email}
-    
-    REPLY EMAIL: {reply_email}
-    
+    My reply to that email is this: {reply_email}
+    END REPLY
+
+    I want you to rewrite my reply ensuring that it is rewritten in a proffessional format and compassionate tone. 
+    Please start the rewritten reply with a warm introduction. Add the introduction if you need to.
+        
     YOUR RESPONSE:
 """
 
